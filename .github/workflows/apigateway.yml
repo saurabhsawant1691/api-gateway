@@ -1,0 +1,17 @@
+name: Learn basic of GitHub Action for API Gateway
+
+on:
+  push:
+    branches:
+      -  main
+
+jobs:
+  api-gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Maven Clean Install 
+        run:  mvn-clean install
+      - name: Maven docker build
+        run: mvn docker:build
+      - name: print hellow
+        run: cat /etc/os-release
