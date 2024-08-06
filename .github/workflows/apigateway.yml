@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Maven Clean Install 
-        run:  mvn-clean install
+        run:  mvn clean install
       - name: Maven docker build
         run: mvn docker:build
       - name: print hellow
